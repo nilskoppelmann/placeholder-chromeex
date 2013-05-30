@@ -2,9 +2,16 @@
     "manifest_version": 2,
     "name": "Nils Koppelmann Chrome Extension",
     "version": "1.0",
-    "description": "My first Chrome extension.",
+
+    "description": "Keep up with the latest from nils-koppelmann.de",
+    "homepage_url": "http://nils-koppelmann.de/",
+    "background_page": "background.html",
+    "permissions": [
+        "http://nils-koppelmann.de/*"
+    ],
     "browser_action": {
        "default_icon": "icon.png",
-       "default_popup": "popup.html"
+       "default_title": "www.nils-koppelmann.de Fetcher",
+       "default_popup": "popup.html" 
     }
 }
