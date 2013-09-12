@@ -1,11 +1,30 @@
 <!doctype html>
-<html>
+<html ng-app="PlaceholderApp" ng-csp>
     <head>
-        <title>Something</title>
-        <link rel="stylesheet" href="stylesheet.css">
+        <title>Placeholder App</title>
+        <script src="js/lib/angular.min.js"></script>
+        <script src="js/app/app.js"></script>
+        <link rel="stylesheet" href="css/stylesheet.css">
     </head>
     <body>
-        Hello my name is Nils.
-    <script src="popup.js"></script>
+        <form id="">
+            <input type="number" id="width" autofocus ng-model="xSize" min="0" value="300" required> 
+            <input type="number" id="height" ng-model="ySize" min="0" value="400" required><br>
+            <input type="text" ng-model="placeholderText" placeholder="placeholderText" required><br>
+            <!-- <input type="color" ng-model="fgColor" ng-value="#ff00ff">
+            <input type="color" ng-model="bgColor" ng-value="#ff00ff"> -->
+            <input type="text" id="filename" ng-model="filename" placeholder="filename" required>
+            <select id="fileext" ng-model="filetype">
+                <option value=".jpeg">.jpeg</option>
+                <option value=".jpg">.jpg</option>
+                <option value=".png">.png</option>
+                <option value=".gif">.gif</option>
+            </select>
+            <input type="text" disabled value="http://placehold.it/{{xSize}}x{{ySize}}{{filetype}}&text={{placeholderText}}">
+            <a id="downloadResult" ng-href="http://placehold.it/{{xSize}}x{{ySize}}{{filetype}}&text={{placeholderText}}" download="{{filename}}">Download</a><br>
+        </form>
+        width: {{xSize}}<br><hr>
+        height: {{ySize}}<br><hr>
+        filename: {{filename}}{{filetype}}<br>
     </body>
 </html>

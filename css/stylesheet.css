@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    width: 250px;
+    background-color: rgba(57,57,57,1);
+    color: white;
+    padding: 7px;
+    font: normal normal normal .9em/1.25em sans-serif;
+}
+
+hr {
+    opacity: .1;
+}
+
+form {
+}
+
+form input, select {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    border-right: 1px solid rgba(255,255,255,.3);
+    background: rgba(0,0,0,.4);
+    padding: 5px;
+    border-radius: 3px;
+    color: rgba(255,255,255,.8);
+    opacity: 0.7;
+    outline: none;
+    box-shadow: inset 1px 1px 2px rgba(0,0,0,.5);
+    margin: 0 0 10px;
+}
+
+form input:focus, select:focus {
+    opacity: 1;
+}
+
+form input#width, input#height {
+    width: 45%;
+}
+
+form input#height {
+    float: right;
+}
+
+form input#filename {
+    width: 65%;
+    margin: 0 5px 10px 0;
+}
+
+form select#fileext {
+    width: 31%;
+    padding: 4px 5px;
+}
+
+form a#downloadResult {
+    width: 100%;
+    border-radius: 3px;
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+    background: -webkit-linear-gradient(rgba(150,150,150,1) 0%, rgba(100,100,100,1) 100%);
+    color: white; 
+}
+
+form a#downloadResult:active {
+
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,.3);
+}

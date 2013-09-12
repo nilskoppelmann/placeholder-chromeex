@@ -1,20 +1,20 @@
 {
-    "manifest_version": 2,
-    "name": "Nils Koppelmann Chrome Extension",
+    "name": "Placehold.it App",
     "version": "1.0",
+    "manifest_version": 2,
 
-    "description": "",
-    "homepage_url": "http://nils-koppelmann.de/",
-    "background": {
-        "scripts": ["eventPage.js"],
-        "persistent": false 
-    },
-    "permissions": [
-        "http://placehold.it/*"
-    ],
+    "description": "Great Placeholderservice with GUI",
+    "icons": {},
     "browser_action": {
-       "default_icon": "icon.png",
-       "default_title": "placehold.it fetcher",
-       "default_popup": "popup.html" 
-    }
+        "default_icon": "img/defaulticon.png",
+        "default_popup": "popup.html",
+        "default_title": "Placehold.it App"
+    },
+    "content_scripts": [ {
+        "js": [ "js/app/content.js" ],
+        "matches": [ "*://*/*" ],
+        "run_at": "document_start"
+    } ],
+    "minimum_chrome_version": "18",
+    "permissions": [ "http://*/*", "https://*/*", "unlimitedStorage", "contextMenus", "cookies", "tabs", "notifications" ]
 }
