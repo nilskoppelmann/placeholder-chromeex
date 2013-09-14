@@ -7,9 +7,9 @@
         <link rel="stylesheet" href="css/stylesheet.css">
     </head>
     <body>
-        <form id="">
-            <input type="number" id="width" autofocus ng-model="xSize" min="0" value="300" required> 
-            <input type="number" id="height" ng-model="ySize" min="0" value="400" required><br>
+        <form ng-controller="Main">
+            <input type="number" id="width" autofocus ng-model="xSize" min="0" required> 
+            <input type="number" id="height" ng-model="ySize" min="0" required><br>
             <input type="text" ng-model="placeholderText" placeholder="placeholderText" required><br>
             <!-- <input type="color" ng-model="fgColor" ng-value="#ff00ff">
             <input type="color" ng-model="bgColor" ng-value="#ff00ff"> -->
