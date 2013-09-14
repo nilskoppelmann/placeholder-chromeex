@@ -56,6 +56,20 @@ form select#fileext {
     padding: 4px 5px;
 }
 
+form select option:checked {
+    background: #E8117F;
+    color: white;
+}
+
+form select option:not(:checked) {
+    background: rgba(57,57,57,1);
+    color: #E8117F;
+}
+
+form select option:focus, option:hover {
+    background: rgba(57,57,57,1);
+}
+
 form a#downloadResult {
     width: 100%;
     border-radius: 3px;
@@ -70,4 +84,17 @@ form a#downloadResult {
 form a#downloadResult:active {
 
     box-shadow: inset 2px 2px 2px rgba(0,0,0,.3);
+}
+
+form label {
+    margin: 0 0 10px 0;
+    display: inline-block!important;
+}
+
+form label[for='width'], label[for='height'] {
+    width: 45%;
+}
+
+form label[for='height'] {
+    float: right;
 }
