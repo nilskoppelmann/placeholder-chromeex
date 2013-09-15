@@ -15,5 +15,5 @@
         "default_title": "Placehold.it App"
     },
     "minimum_chrome_version": "18",
-    "permissions": [ "http://*/*", "https://*/*", "unlimitedStorage", "contextMenus", "cookies", "tabs", "notifications" ]
+    "permissions": [ "http://placehold.it/*", "unlimitedStorage" ]
 }
