@@ -38,12 +38,25 @@ form input:focus, select:focus {
     opacity: 1;
 }
 
+form input:disabled {
+    opacity: .3;
+}
+
 form input#width, input#height {
     width: 45%;
 }
 
 form input#height {
     float: right;
+}
+
+form input#squareDim {
+    width: 6%;
+    float: left:
+    display: inline;
+    position: relative;
+    left: 2px;
+    top: 1px;
 }
 
 form input#filename {

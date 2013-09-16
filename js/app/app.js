@@ -6,4 +6,7 @@ function Main($scope) {
     $scope.filename = 'filename';
     $scope.filetype = '.jpg';
     $scope.placeholderText = '';
+    $scope.squareDimChange = function() {
+        $scope.ySize = $scope.xSize;
+    };
 }

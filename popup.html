@@ -6,12 +6,13 @@
         <script src="js/app/app.js"></script>
         <link rel="stylesheet" href="css/stylesheet.css">
     </head>
-    <body>
-        <form ng-controller="Main">
+    <body ng-controller="Main">
+        <form>
             <label for="width">width:</label>
             <label for="height">height:</label><br>
-            <input type="number" id="width" autofocus ng-model="xSize" min="0" required> 
-            <input type="number" id="height" ng-model="ySize" min="0" required><br>
+            <input type="number" id="width" autofocus ng-model="xSize" min="0" required>
+            <!-- <input type="checkbox" id="squareDim" ng-model="squareDim" ng-click="squareDimChange()">-->
+            <input type="number" id="height" ng-model="ySize" ng-disabled="squareDim" min="0" required><br>
             <input type="text" ng-model="placeholderText" placeholder="placeholderText" required><br>
             <!-- <input type="color" ng-model="fgColor" ng-value="#ff00ff">
             <input type="color" ng-model="bgColor" ng-value="#ff00ff"> -->
@@ -24,10 +25,10 @@
                 <option value=".gif">.gif</option>
             </select>
             <input type="text" disabled value="http://placehold.it/{{xSize}}x{{ySize}}{{filetype}}&text={{placeholderText}}">
-            <a id="downloadResult" ng-href="http://placehold.it/{{xSize}}x{{ySize}}{{filetype}}&text={{placeholderText}}" download="{{filename}}">Download</a><br>
+            <a id="downloadResult" ng-href="http://placehold.it/{{xSize}}x{{ySize}}{{filetype}}&text={{placeholderText}}" download="{{filename}}{{filetype}}">Download</a><br>
+            width: {{xSize}}px<br><hr>
+            height: {{ySize}}px<br><hr>
+            filename: {{filename}}{{filetype}}<br>
         </form>
-        width: {{xSize}}px<br><hr>
-        height: {{ySize}}px<br><hr>
-        filename: {{filename}}{{filetype}}<br>
     </body>
 </html>
