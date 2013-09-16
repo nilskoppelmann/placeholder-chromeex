@@ -6,5 +6,5 @@ It serves a quiet nice interface for the service on placehold.it
 
 To-do:
 - [ ] add color-picker
-- [x] design a logo (vector)
+- [x] design a logo -(vector)-
 - [ ] option to save/load presets
